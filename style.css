@@ -1,0 +1,171 @@
+/* --- DARK MONOCHROME THEME STYLES (Inverted) --- */
+
+/* Base Colors */
+:root {
+    --bg-dark: #111111;
+    --bg-light: #ffffff;
+    --text-light: #cccccc;
+    --border-gray: #444444;
+    --accent-white: #ffffff;
+    --footer-bg: #0a0a0a;
+}
+
+/* General Styles */
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0;
+    overflow: auto;
+    padding-top: 20px;
+}
+.container { 
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+    flex-grow: 1;
+}
+h1 { 
+    text-align: center; 
+    color: var(--accent-white);
+    margin-bottom: 25px; 
+    border-bottom: 2px solid var(--accent-white);
+    padding-bottom: 10px;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 700; 
+}
+label { 
+    display: block; 
+    margin-top: 20px; 
+    margin-bottom: 8px; 
+    font-weight: 600; 
+    color: var(--text-light); 
+}
+
+/* Input and Textarea Styles */
+input[type="number"], textarea { 
+    width: 100%; 
+    padding: 12px; 
+    margin-bottom: 20px; 
+    box-sizing: border-box; 
+    border: 1px solid var(--border-gray); 
+    border-radius: 4px; 
+    font-size: 16px; 
+    resize: vertical;
+    background-color: #000000;
+    color: var(--accent-white);
+    font-family: 'monospace', monospace;
+    transition: border-color 0.3s;
+}
+input[type="number"]:focus, textarea:focus {
+    border-color: var(--accent-white);
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+#outputText { 
+    background-color: #000000;
+    border-color: #666666;
+    color: var(--accent-white);
+}
+
+/* Button Group Styles (Default: Side-by-side for desktop) */
+.button-group {
+    display: flex;
+    gap: 15px; 
+    margin-bottom: 25px;
+}
+button { 
+    display: block; 
+    width: 100%; 
+    padding: 15px; 
+    color: var(--bg-dark); 
+    border: 1px solid var(--accent-white); 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 1.1em; 
+    font-weight: 600; 
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase;
+}
+
+/* Specific Button Colors */
+#encryptBtn {
+    background-color: var(--accent-white); 
+    color: var(--bg-dark); 
+}
+#encryptBtn:hover {
+    background-color: #bbbbbb;
+    border-color: #bbbbbb;
+}
+#decryptBtn {
+    background-color: var(--bg-dark); 
+    color: var(--accent-white); 
+    border: 1px solid var(--accent-white);
+}
+#decryptBtn:hover {
+    background-color: #333333;
+    color: var(--accent-white);
+}
+
+/* Note Style */
+.decryption-note {
+    margin-top: 25px;
+    padding: 12px;
+    border: 1px solid var(--accent-white);
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: var(--text-light);
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* --- 🦶 DEVELOPER FOOTER STYLE --- */
+.developer-footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--border-gray);
+    font-size: 0.85em;
+    color: #666666;
+}
+.developer-footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+}
+.developer-footer a:hover {
+    color: var(--accent-white);
+    text-decoration: underline;
+}
+
+/* --- 📱 MOBILE RESPONSIVENESS (Media Query) --- */
+@media (max-width: 650px) {
+    .container {
+        width: 95%; 
+        padding: 10px;
+        flex-grow: 0; 
+    }
+    body {
+        padding-top: 10px;
+    }
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    button {
+        padding: 12px;
+        font-size: 1em;
+    }
+    .developer-footer {
+        margin-top: 20px;
+        padding: 10px 0;
+    }
+}
