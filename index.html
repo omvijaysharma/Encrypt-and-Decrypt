@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt and Decrypt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Caesar Cipher Utility | Encrypt and Decrypt</h1> 
+    <label for="shift">Shift Key (Positive Number for Offset):</label>
+    <input type="number" id="shift" value="3" min="1">
+
+    <label for="inputText">Input Message / Ciphertext:</label>
+    <textarea id="inputText" placeholder="Enter plaintext to encrypt or ciphertext to decrypt..."></textarea>
+
+    <div class="button-group">
+        <button id="encryptBtn" onclick="processCipher('encrypt')">Process Encryption (Shift +)</button> 
+        <button id="decryptBtn" onclick="processCipher('decrypt')">Process Decryption (Shift -)</button> 
+    </div>
+
+    <label for="outputText">Output Result:</label>
+    <textarea id="outputText" readonly placeholder="The resulting text will be displayed here..."></textarea>
+
+    <p class="decryption-note">
+        This tool uses the Caesar Cipher with the number you set. It works on letters, numbers, and common symbols.
+    </p>
+
+</div>
+
+<div class="developer-footer">
+    Developed by <a href="https://github.com/omvijaysharma" target="_blank">omvijaysharma</a> with ai (Gemini)
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
